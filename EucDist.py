@@ -1,5 +1,6 @@
 #This is Euclidean Distance
 from math import sqrt
+#look at how many things ppl ranked similarly then plot the different ratings/ppl on a charg
 
 # A dictionary of movie critics and their ratings of a small set of movies provided in the book
 critics={'Lisa Rose': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.5,
@@ -34,6 +35,7 @@ def sim_distance(prefs,person1,person2):
  # Add up the squares of all the differences
  sum_of_squares=sum([pow(prefs[person1][item]-prefs[person2][item],2)
  for item in prefs[person1] if item in prefs[person2]])
+ #create formula to give higher values for ppl who are similar, add one to the function and invert it
  return 1/(1+sum_of_squares)
 
 similarity = sim_distance(critics, 'Mick LaSalle', 'Toby')
