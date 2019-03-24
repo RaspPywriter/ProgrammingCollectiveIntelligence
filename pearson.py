@@ -17,6 +17,8 @@ critics={'Lisa Rose': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.5,
 'Toby': {'Snakes on a Plane':4.5,'You, Me and Dupree':1.0,'Superman Returns':4.0}}
 
 # Returns the Pearson correlation coefficient for p1 and p2
+#correlation coefficient: measure of how well two sets of data fit on a straight line.
+#More complicated than the Euclidean distance score, but better in situations where the data isn’t well normalized (ex harst critic)
 def sim_pearson(prefs,p1,p2):  # Get the list of mutually rated items
     si={}
     for item in prefs[p1]:
